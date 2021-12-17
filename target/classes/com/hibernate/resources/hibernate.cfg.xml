@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+<session-factory>
+<!--  Database Connection Settings  -->
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/shashank_db</property>
+<property name="connection.username">root</property>
+<property name="connection.password">1234</property>
+<!--  JDBC Connection Pool  -->
+<property name="connection.pool_size">5</property>
+<!--  SQL Dialect  -->
+<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+<property name="show_sql">true</property>
+<property name="hbm2ddl.auto">update</property>
+<!--  Drop and re-create the database schema on startup  -->
+<!--  <mapping resource="resource/student.hbm.xml" />  -->
+<mapping class="com.hibernate.models.City"/>
+<mapping class="com.hibernate.models.Country"/>
+<mapping class="com.hibernate.models.Language"/>
+<mapping class="com.hibernate.models.Sports"/>
+</session-factory>
+</hibernate-configuration>
